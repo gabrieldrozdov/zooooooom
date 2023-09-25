@@ -8,7 +8,8 @@ const myRatio = 1728/1117;
 const myDPI = 127.01;
 const userRatio = screen.width/screen.height;
 const diffRatio = myRatio - userRatio;
-const adjustedDPI = myDPI*(1+diffRatio);
+// const adjustedDPI = myDPI*(1+diffRatio);
+const adjustedDPI = myDPI;
 r.style.setProperty('--ppi', adjustedDPI + "px");
 
 // Generate ruler

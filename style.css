@@ -1,0 +1,124 @@
+@font-face {
+	font-family: 'Apfel';
+	src: url('ApfelGrotezk-Regular.woff2');
+	font-weight: normal;
+}
+@font-face {
+	font-family: 'Apfel';
+	src: url('ApfelGrotezk-Fett.woff2');
+	font-weight: bold;
+}
+:root {
+	--ppi: 127.1px;
+}
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Apfel', 'Arial Narrow', 'Arial', sans-serif;
+	font-variation-settings: 'wght' 100;
+	font-size: calc(var(--ppi) / 6);
+}
+.container {
+	height: 100dvh;
+	width: 100vw;
+	position: relative;
+	overflow: scroll;
+	pointer-events: none;
+}
+.intro {
+	width: 100vw;
+	height: 100dvh;
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	z-index: 9999;
+	background-color: rgba(255,255,255,.8);
+}
+.intro h1 {
+	font-weight: bold;
+	text-transform: uppercase;
+	font-size: 2em;
+}
+.outro {
+	width: 100vw;
+	height: 100dvh;
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: none;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 1em;
+	z-index: 9999;
+	background-color: rgba(255,255,255,.8);
+}
+#message {
+	font-weight: bold;
+	text-transform: uppercase;
+	font-size: 2em;
+}
+.outro-score {
+	display: grid;
+	grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+	text-align: center;
+	justify-content: center;
+	align-items: center;
+	line-height: 1em;
+	gap: 1em;
+}
+.outro-score div {
+	background-color: white;
+	padding: 1em 1.2em 0.8em 1.2em;
+	border: 4px solid red;
+}
+#stop, #score {
+	color: red;
+	font-size: 4em;
+	line-height: 1em;
+}
+.marker {
+	width: 4px;
+	height: 100dvh;
+	position: fixed;
+	left: calc(50% - 2px);
+	top: 0;
+	background-color: red;
+}
+.ruler {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	display: flex;
+	padding-left: 50vw;
+}
+.inch {
+	display: flex;
+	align-items: center;
+	justify-content: end;
+	text-align: right;
+	padding: calc(var(--ppi) / 12);
+	width: var(--ppi);
+	position: relative;
+}
+.ruler[data-start="1"] .label {
+	opacity: 0;
+	transition: 15s;
+}
+.line {
+	position: absolute;
+	right: 0;
+	height: 100%;
+	border-right: 1px solid black;
+}
+@media only screen and (max-width: 800px) {
+	.outro-score {
+		grid-template-columns: minmax(0, 1fr);
+	}
+}

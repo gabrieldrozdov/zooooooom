@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Zoooooooom</title>
+	<link rel="stylesheet" href="style.css">
+
+	<meta name="author" content="Gabriel Drozdov">
+	<meta name="keywords" content="Games, Measurement, Ruler, Timing">
+	<meta name="description" content="120 inches">
+	<meta property="og:url" content="https://gabrieldrozdov.github.io/zoooooooom">
+	<meta name="og:title" property="og:title" content="Zoooooooom">
+	<meta property="og:description" content="120 inches">
+	<meta property="og:image" content="opengraph.png">
+	<link rel="icon" type="image/png" href="favicon.png" />
+</head>
+<body>
+	<div class="container">
+		<div class="intro">
+			<h1>Zoooooooom</h1>
+			<br>
+			<p>Stop at exactly 120&quot;</p>
+			<br>
+			<p>START/STOP: <strong>SPACE</strong> or <strong>CLICK</strong></p>
+		</div>
+		<div class="outro">
+			<p id="message">Game Over!</p>
+
+			<div class="outro-score">
+				<div>
+					<p>You stopped at</p>
+					<p id="stop">0&quot;</p>
+				</div>
+				<div>
+					<p>You missed 120&quot; by</p>
+					<p id="score"></p>
+				</div>
+			</div>
+
+			<p>Press <strong>SPACE</strong> or <strong>CLICK</strong> to restart</p>
+		</div>
+		<div class="marker"></div>
+		<div class="ruler"></div>
+	</div>
+
+	<script src="script.js"></script>
+</body>
+</html>

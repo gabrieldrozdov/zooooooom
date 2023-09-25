@@ -17,7 +17,7 @@
 	box-sizing: border-box;
 	font-family: 'Apfel', 'Arial Narrow', 'Arial', sans-serif;
 	font-variation-settings: 'wght' 100;
-	font-size: calc(var(--ppi) / 6);
+	font-size: 18px;
 }
 .container {
 	height: 100dvh;
